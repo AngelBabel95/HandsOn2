@@ -1,0 +1,16 @@
+p{
+  text-align: justify;
+}
+/* 768 */
+.col-md-4{
+  min-height: 850px;
+}
+.card{
+  min-height: 850px;
+}
+.soci{
+  margin-bottom: 0;
+}
+.profile{
+  max-width: 300px;
+}

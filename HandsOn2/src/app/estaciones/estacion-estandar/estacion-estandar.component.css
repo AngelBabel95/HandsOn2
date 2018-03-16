@@ -1,0 +1,17 @@
+.row:first-child{
+  background: transparent;
+}
+.row{
+    background-color: white;
+}
+p{
+  text-align: justify;
+}
+.aside {
+  font-size:14px;
+  /* margin-top: 6px; */
+  width: 100%;
+  margin-left: 0;
+ /*  height: auto; */
+
+}

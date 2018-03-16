@@ -1,0 +1,47 @@
+<div class="container mb-2">
+        <div class="row align-items-center main">
+            <div class="col text-center">
+                <div class="card">
+                  <div class="card-header">
+                     <div class="row">
+                       <h1 class="col-md-6"> Entradas de Blog </h1>
+                       <form class="form-inline col-md-6" action="/action_page.php">
+                        <div class="search">
+                          <span class="fa fa-search"></span>
+                          <input class="form-control mr-sm-2" name="search" type="text"  placeholder="Buscar" [(ngModel)]="sFiltrar">
+                        </div>
+                       </form>
+                     </div>
+                  </div>
+                 <div class="card-body">
+                 <ul>
+                   <li *ngFor="let item of aEntradas; index as i;" >
+                        <ng-container *ngIf="!isEmpty(); else listaCompleta">
+                              <ng-container *ngIf="item.titulo.includes(sFiltrar)" >
+                                <div id="entradas">
+                                  <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" (outEditItem)="editEntradaAux($event)"></app-lista>
+                                </div>
+                              </ng-container>
+                        </ng-container>
+                        <ng-template #listaCompleta>
+                            <app-lista  [oEntrada]="item" [admin]="admin" (outDeleteItem)="deleteEntrada($event)" (outEditItem)="editEntradaAux($event)"></app-lista>
+                          </ng-template>
+                          <div [className]="claseError">
+                              <div class="alert alert-danger">
+                                  <strong>Error!</strong> No se han encontrado resultados.
+                                </div>
+                           </div>
+                   </li>
+
+                 </ul>
+               </div>
+               <div class="card-footer">
+                 <!-- <app-editar></app-editar>-->
+                 <app-crear (outAddBlogItem)="addEntrada($event)" [ngClass]="formClass"></app-crear>
+                 <app-editar (outEditItem)="editEntrada($event)" [oEntrada]="oEditar" [ngClass]="editClass"></app-editar>
+               </div>
+
+                </div>
+            </div>
+        </div>
+       </div>

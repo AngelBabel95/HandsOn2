@@ -1,0 +1,2 @@
+.\node_modules\.bin\json-server .\HandsOn2\data.json
+Desde la carpeta raiz

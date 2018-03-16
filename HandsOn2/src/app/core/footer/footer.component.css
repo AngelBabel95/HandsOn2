@@ -1,0 +1,36 @@
+/* .content {
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 0;
+
+
+}
+    .content p{
+        display: inline-block;
+    }
+    .content img{
+        width: 12%;
+        height: 12%;
+    } */
+
+
+    *{
+      font-family: 'Courier New', Courier, monospace;
+      font-style: italic;/*
+      border: 1px;
+      background-color: gainsboro; */
+      color: grey;
+      align-content: center;
+    }
+    img{
+      width: 12%;
+      height: 12%;
+    }
+    @media only screen and (max-width: 700px){
+      footer div:first-child{
+        display: none;
+      }
+    }
