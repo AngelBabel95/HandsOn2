@@ -2,6 +2,37 @@
     background-color: gainsboro;
     white-space: nowrap;
   }
+
+  /* Comienza animación logo */
+  .div_img_logo {
+    margin-right: 3%;
+    animation: flotar 1s infinite alternate-reverse ease-in-out;
+  }
+
+  .img_logo {
+    animation: rotarLogo 4s infinite reverse linear;
+    
+  }
+
+  @keyframes rotarLogo {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+  @keyframes flotar {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, -5px, 0);
+    }
+  }
+
+/* Hasta aqui animación logo */
 #btnS{
   cursor: pointer;
 }
@@ -15,6 +46,7 @@ nav img{
   -moz-border-radius: 200px 200px 200px 200px;
   -webkit-border-radius: 200px 200px 200px 200px;
   border: 0px solid #000000;
+  margin-right: 3%;
 }
 h1 {
   color: gray;
