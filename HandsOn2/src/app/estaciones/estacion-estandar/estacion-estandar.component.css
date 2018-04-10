@@ -15,3 +15,16 @@ p{
  /*  height: auto; */
 
 }
+
+.img_plano {
+  margin-top: 5%;
+  width: 80%;
+  transition: margin-top 0.5s, width 0.75s;
+}
+
+#planoPista:hover>.img_plano{
+  margin-top: 0%;
+  width: 100%;
+}
+
+
