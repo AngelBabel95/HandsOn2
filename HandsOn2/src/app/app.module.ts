@@ -9,6 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { BlogModule } from './blog/blog.module';
 import { EstacionesModule } from './estaciones/estaciones.module';
+import { AutorService } from '../servicios/autor.service';
+
+import { NguiMapModule} from '@ngui/map';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +26,8 @@ import { EstacionesModule } from './estaciones/estaciones.module';
     CoreModule,
     AboutModule,
     BlogModule,
-    EstacionesModule
+    EstacionesModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCxAMWBdz3ynF-KGDdwK-GmhKjFGHUJf4o'})
   ],
   providers: [],
   bootstrap: [AppComponent]

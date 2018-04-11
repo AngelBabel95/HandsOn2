@@ -77,6 +77,27 @@
         <div class="aside col-xl-2">
             <app-aside></app-aside>
         </div>
+        <!-- A partir de aquí API Maps -->
+        <table class="table">
+            <ngui-map class="col-lg-12" zoom="10" center="{{oEstacion.latitud}},{{oEstacion.longitud}}">
+              <marker position="{{oEstacion.position}}"
+                  [geoFallbackPosition]="[oEstacion.latitud, oEstacion.longitud]"
+                  draggable="true">
+              </marker>
+              <directions-renderer
+                  [suppressMarkers]="true"
+                  [draggable]="true"
+                  panel="#my-panel"
+                  [directions-request]="direction">
+            </directions-renderer>
+            </ngui-map>
+            <div id="my-panel" class="col-lg-12"></div>
+          </table>
 
   </div>
+  
+
+  
+
+
 

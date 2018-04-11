@@ -20,9 +20,15 @@ export interface FotoIf {
   source: string;
   info: string;
 }
-export class Estacion implements PistasIf, ForfaitsIf, FotoIf {
+export interface Localization {
+  latitud: number;
+  longitud: number;
+  position: string;
+}
+export class Estacion implements PistasIf, ForfaitsIf, FotoIf, Localization {
   // tslint:disable-next-line:max-line-length
   constructor(public url: string, public name: string, public total: number, public km: number, public verdes: number, public azules: number,
     public rojas: number , public remontes: number, public alta1: number, public baja1: number, public alta2: number, public baja2: number,
-    public alta5: number, public baja5: number, public alt: string, public source: string, public info: string) {  }
+    // tslint:disable-next-line:max-line-length
+    public alta5: number, public baja5: number, public alt: string, public source: string, public info: string, public latitud: number, public longitud: number, public position: string) {  }
 }

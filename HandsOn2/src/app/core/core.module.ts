@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
+import { AutorService } from '../../servicios/autor.service';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { MenuComponent } from './menu/menu.component';
     RouterModule
   ],
   declarations: [MenuComponent, HeaderComponent, FooterComponent, AsideComponent],
-  exports: [MenuComponent, FooterComponent, HeaderComponent, AsideComponent]
+  exports: [MenuComponent, FooterComponent, HeaderComponent, AsideComponent],
+  providers: [ AutorService ]
 })
 export class CoreModule { }

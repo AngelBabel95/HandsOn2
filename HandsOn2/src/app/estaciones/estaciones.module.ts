@@ -7,10 +7,13 @@ import { EstacionEstandarComponent } from './estacion-estandar/estacion-estandar
 import { AsideComponent } from '../core/aside/aside.component';
 import { CoreModule } from '../core/core.module';
 
+import { NguiMapModule} from '@ngui/map';
+
 @NgModule({
   imports: [
     CommonModule,
-    EstacionesRoutingModule, CoreModule
+    EstacionesRoutingModule, CoreModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCxAMWBdz3ynF-KGDdwK-GmhKjFGHUJf4o'})
   ],
   declarations: [EstacionesComponent, EstacionEstandarComponent],
   exports: [EstacionesComponent]
