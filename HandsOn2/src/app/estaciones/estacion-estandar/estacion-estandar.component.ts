@@ -10,9 +10,10 @@ import { DirectionsRenderer } from '@ngui/map';
   styleUrls: ['./estacion-estandar.component.css']
 })
 export class EstacionEstandarComponent implements OnInit {
-
+  estado: boolean; // Estado delplegar ruta
   oEstacion: Estacion;
   titulo: string;
+  estadoPanel: string;
 
   @ViewChild(DirectionsRenderer) directionsRendererDirective: DirectionsRenderer;
 
@@ -28,8 +29,10 @@ export class EstacionEstandarComponent implements OnInit {
   constructor(private router: Router, private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    this.oEstacion = this.getObject(this.router.url.slice(12));
 
+    this.estado = false;
+    this.oEstacion = this.getObject(this.router.url.slice(12));
+    this.estadoPanel = 'oculto';
     // tslint:disable-next-line:max-line-length
     this.direction = {origin: 'BABEL Sistemas de Información, Calle del Príncipe de Vergara, 108, 28002 Madrid', destination: this.oEstacion.position, travelMode: 'DRIVING'};
 
@@ -50,5 +53,14 @@ export class EstacionEstandarComponent implements OnInit {
 
   showDirection() {
     this.directionsRendererDirective['showDirections'](this.direction);
+  }
+  desplegarRuta() {
+    if (this.estado) {
+      this.estadoPanel = 'oculto';
+    }
+    if (!this.estado) {
+      this.estadoPanel = '';
+    }
+    this.estado = !this.estado;
   }
 }
