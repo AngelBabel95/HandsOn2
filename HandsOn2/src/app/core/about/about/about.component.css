@@ -1,0 +1,40 @@
+.oculto{
+  display: none;
+}
+p{
+  text-align: justify;
+}
+/* 768 */
+.col-md-4{
+  min-height: 850px;
+}
+.card{
+  min-height: 850px;
+}
+.soci{
+  margin-bottom: 0;
+}
+.profile{
+  max-width: 300px;
+}
+
+@media (max-width: 992px) {
+  .row{
+
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 630px) {
+  .row{
+
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .row{
+
+    margin-left: 2%;
+  }
+}

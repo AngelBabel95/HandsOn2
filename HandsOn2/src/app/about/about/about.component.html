@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <div class="row">
         <div class="card" style="width:400px">
           <img class="card-img-top" src="./assets/IgnacioPallares.png" alt="Foto Ignacio Pallarés">
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <div class="row">
         <div class="card" style="width:400px">
           <img class="card-img-top" src="./assets/AngelMartin.png" alt="Foto Ángel Martín">
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-lg-4">
       <div class="row">
         <div class="card" style="width:400px">
           <img class="card-img-top" src="./assets/DavidGonzalez.png" alt="Foto David González">
@@ -81,4 +81,28 @@
       </div>
     </div>
   </div>
+  <section id="reproductor">
+    <div class="row align-items-center">
+      <div class="col-lg-3 col-md-1"></div>
+      <video id="medio" class="col-lg-6 col-md-10">
+        <source src="../../../assets/video/Comienza BABELcamp 3.0.mp4" type="video/mp4">
+      </video>
+      <div class="col-lg-3 col-md-1"></div>
+    </div>
+    <nav class="row align-items-center">
+      <div class="col-lg-4 col-md-2"></div>
+      <div class="col-lg-5 col-md-9 row align-items-center">
+          <div class="col-md-1"></div>
+          <progress class="col-md-5" max="100"></progress>
+          <div class="col-md-1">
+          </div>
+          <i class="fa fa-step-backward col-1" (click)="backward()"></i>
+          <i class="fa fa-play col-1" (click)="changeState()" [ngClass]="statPlay"></i>
+          <i class="fa fa-pause col-1" (click)="changeState()" [ngClass]="statPausa"></i>
+          <i class="fa fa-step-forward col-1" (click)="forward()"></i>
+      </div>
+      <div class="col-lg-3 col-md-1"></div>
+    </nav>
+  </section>
 </div>
+<script src="../../../assets/javascript/video_control.js"></script>
